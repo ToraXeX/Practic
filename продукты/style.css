@@ -1,0 +1,259 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #f3f3f3;
+    padding: 10px 20px;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-bottom: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background: #00aaff;
+    color: #fff;
+}
+
+.products-header {
+    background: #00aaff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+}
+
+.product-column {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.product-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.product-image {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex: 1;
+    position: relative;
+}
+
+.product-details h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.quantity-section {
+    margin-top: 10px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.quantity-btn {
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.quantity-btn:hover {
+    background: #007bbd;
+}
+
+.quantity-controls input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.product-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.dropdown-btn,
+.add-to-cart-btn {
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 5px 10px; /* уменьшение размера кнопок */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin: 5px 0;
+    min-width: 100px; /* Минимальная ширина кнопок */
+    width: auto;
+    display: inline-;
+}
+
+.module-group,
+.dropdown-btn {
+    min-width: 100px; /* Минимальная ширина кнопок */
+    width: auto;
+}
+
+.dropdown-btn:hover,
+.add-to-cart-btn:hover {
+    background: #007bbd;
+    box-shadow: 0 5px 15px rgba(0, 123, 189, 0.4);
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.dropdown-content label {
+    display: block;
+    margin: 5px 0;
+}
+
+.module-group {
+    margin-bottom: 15px;
+    align-items: center;
+    width: 100%;
+    gap: 10px; /* Adds space between items */
+}
+
+.module-group h4 {
+    margin: 0;
+    font-size: 16px;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+footer {
+    background-color: #f3f3f3;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.footer-contacts {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact-block {
+    text-align: left;
+}
+
+.contact-block p {
+    margin: 5px 0;
+}
+
+.contact-block a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.contact-block a:hover {
+    color: #00aaff;
+    text-decoration: underline;
+}
+
+.dropdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dropdown-content td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.product-top-content {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукты - Симплекс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Simplex">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Продукты</a></li>
+            <li><a href="#">Проекты</a></li>
+            <li><a href="#">Поддержка</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">База знаний</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="products-header">
+            <h1>Наши продукты</h1>
+        </div>
+        <div class="products-container">
+            <div class="product-row">
+                <div class="product-item">
+                    <div class="product-top-content">
+                        <div class="product-image">
+                            <img src="product2.png" alt="Продукт 1">
+                        </div>
+                        <div class="product-details">
+                            <h3>Электронная очередь СиМед-SMART</h3>
+                            <p>Электронная очередь СиМед-SMART – это программно-аппаратный комплекс, который осуществляет координацию и управление процессом прохождения профосмотров, создавая комфортные условия ожидания для пациентов.</p>
+                            <p id="price-1">Цена: 72000 р</p>
+                            <div class="quantity-section">
+                                <p>Количество рабочих мест:</p>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" onclick="decreaseQuantity(this, 1)">-</button>
+                                    <input type="number" id="quantity-1" value="1" min="1" readonly>
+                                    <button class="quantity-btn" onclick="increaseQuantity(this, 1)">+</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="product-controls">
+                        <button class="dropdown-btn" onclick="toggleDropdown(this, 'category')">Разворот категорий</button>
+                        <div class="dropdown-content" id="dropdown-category-1">
+                            <div class="module-group">
+                                <h4>Категория 1</h4>
+                                <button class="dropdown-btn" onclick="toggleDropdown(this, 'module')">Развернуть модули</button>
+                                <div class="dropdown-content" id="dropdown-module-1-1"></div>
+                            </div>
+                            <div class="module-group">
+                                <h4>Категория 2</h4>
+                                <button class="dropdown-btn" onclick="toggleDropdown(this, 'module')">Развернуть модули</button>
+                                <div class="dropdown-content" id="dropdown-module-1-2"></div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Добавить в корзину</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-top-content">
+                        <div class="product-image">
+                            <img src="product2.png" alt="Продукт 2">
+                        </div>
+                        <div class="product-details">
+                            <h3>СиМед-Клиника</h3>
+                            <p>«СиМед-Клиника» — программный продукт для медицинских организаций, обеспечивающий эффективную автоматизацию бизнес-процессов при оказании услуг в амбулаторно-поликлинических условиях.</p>
+                            <p id="price-2">Цена: 6000 р</p>
+                            <div class="quantity-section">
+                                <p>Количество рабочих мест:</p>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" onclick="decreaseQuantity(this, 2)">-</button>
+                                    <input type="number" id="quantity-2" value="1" min="1" readonly>
+                                    <button class="quantity-btn" onclick="increaseQuantity(this, 2)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-controls">
+                        <button class="dropdown-btn" onclick="toggleDropdown(this, 'category')">Разворот категорий</button>
+                        <div class="dropdown-content" id="dropdown-category-2">
+                            <div class="module-group">
+                                <h4>Категория 1</h4>
+                                <button class="dropdown-btn" onclick="toggleDropdown(this, 'module')">Развернуть модули</button>
+                                <div class="dropdown-content" id="dropdown-module-2-1"></div>
+                            </div>
+                            <div class="module-group">
+                                <h4>Категория 2</h4>
+                                <button class="dropdown-btn" onclick="toggleDropdown(this, 'module')">Развернуть модули</button>
+                                <div class="dropdown-content" id="dropdown-module-2-2"></div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-row">
+                <div class="product-item">
+                    <div class="product-top-content">
+                        <div class="product-image">
+                            <img src="product2.png" alt="Продукт 3">
+                        </div>
+                        <div class="product-details">
+                            <h3>Электронная очередь СиМед-NEXT</h3>
+                            <p>Электронная очередь — это программно-аппаратный комплекс, позволяющий формализовать и оптимизировать управление потоком посетителей. Целью внедрения электронной очереди является упрощение процесса обслуживания пациентов.</p>
+                            <p id="price-3">Цена: 30000 р</p>
+                            <div class="quantity-section">
+                                <p>Количество рабочих мест:</p>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" onclick="decreaseQuantity(this, 3)">-</button>
+                                    <input type="number" id="quantity-3" value="1" min="1" readonly>
+                                    <button class="quantity-btn" onclick="increaseQuantity(this, 3)">+</button>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    
+                    <div class="product-controls">
+                            <button class="dropdown-btn" onclick="toggleDropdown(this, 'category')">Разворот категорий</button>
+                            <div class="dropdown-content" id="dropdown-category-3">
+                                <div class="module-group">
+                                    <h4>Категория 1</h4>
+                                    <button class="dropdown-btn" onclick="toggleDropdown(this, 'module')">Развернуть модули</button>
+                                    <div class="dropdown-content" id="dropdown-module-3-1"></div>
+                                </div>
+                                <div class="module-group">
+                                    <h4>Категория 2</h4>
+                                    <button class="dropdown-btn" onclick="toggleDropdown(this, 'module')">Развернуть модули</button>
+                                    <div class="dropdown-content" id="dropdown-module-3-2"></div>
+                                </div>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart(this)">Добавить в корзину </button>
+                        </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-top-content">
+                        <div class="product-image">
+                            <img src="product2.png" alt="Продукт 4">
+                        </div>
+                        <div class="product-details">
+                            <h3>Электронная регистратура СиМед</h3>
+                            <p>Электронная регистратура СиМед — программный продукт для автоматизации регистратуры поликлиник, позволяющий максимально эффективно построить работу при оказании медицинских услуг всех видов.</p>
+                            <p id="price-4">Цена: 12000 р</p>
+                            <div class="quantity-section">
+                                <p>Количество рабочих мест:</p>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" onclick="decreaseQuantity(this, 4)">-</button>
+                                    <input type="number" id="quantity-4" value="1" min="1" readonly>
+                                    <button class="quantity-btn" onclick="increaseQuantity(this, 4)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-controls">
+                        <button class="dropdown-btn" onclick="toggleDropdown(this, 'category')">Разворот категорий</button>
+                        <div class="dropdown-content" id="dropdown-category-4">
+                            <div class="module-group">
+                                <h4>Категория 1</h4>
+                                <button class="dropdown-btn" onclick="toggleDropdown(this, 'module')">Развернуть модули</button>
+                                <div class="dropdown-content" id="dropdown-module-4-1"></div>
+                            </div>
+                            <div class="module-group">
+                                <h4>Категория 2</h4>
+                                <button class="dropdown-btn" onclick="toggleDropdown(this, 'module')">Развернуть модули</button>
+                                <div class="dropdown-content" id="dropdown-module-4-2"></div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(this)">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Simplex">
+            </div>
+            <div class="footer-contacts">
+                <div class="contact-block">
+                    <p>SimplexEDI</p>
+                    <p>СиМед-Клиника</p>
+                </div>
+                <div class="contact-block">
+                    <p>+7 (4742) 20-35-45</p>
+                    <p><a href="mailto:info@simplex48.ru">info@simplex48.ru</a></p>
+                </div>
+                <div class="contact-block">
+                    <p><a href="#">Наши вакансии</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function generateModules(category, productId) {
+            let modulesHTML = '<table><tr>';
+            for (let i = 1; i <= 9; i++) {
+                const moduleNumber = category * 9 - 9 + i;
+                modulesHTML += `<td><label><input type="checkbox" data-price="${moduleNumber * 1000}" onchange="updatePrice(${productId})"> Модуль ${moduleNumber} (${moduleNumber * 1000} р)</label></td>`;
+                if (i % 3 == 0 && i < 9) {
+                    modulesHTML += '</tr><tr>';
+                }
+            }
+            modulesHTML += '</tr></table>';
+            return modulesHTML;
+        }
+
+        function toggleDropdown(button, type) {
+            const dropdown = button.nextElementSibling;
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function increaseQuantity(button, productId) {
+            const input = document.getElementById(`quantity-${productId}`);
+            input.value = parseInt(input.value) + 1;
+            updatePrice(productId);
+        }
+
+        function decreaseQuantity(button, productId) {
+            const input = document.getElementById(`quantity-${productId}`);
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+                updatePrice(productId);
+            }
+        }
+
+        function addToCart(button) {
+            button.textContent = "Уже в корзине";
+            button.disabled = true;
+        }
+
+        function updatePrice(productId) {
+            const basePrices = {
+                1: 72000,
+                2: 6000,
+                3: 30000,
+                4: 12000
+            };
+            const quantity = document.querySelector(`#quantity-${productId}`).value;
+            let totalPrice = basePrices[productId] * quantity;
+
+            const checkboxes = document.querySelectorAll(`#dropdown-category-${productId} input[type="checkbox"]`);
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    totalPrice += parseInt(checkbox.dataset.price);
+                }
+            });
+
+            document.getElementById(`price-${productId}`).textContent = `Цена: ${totalPrice} р`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".dropdown-content").forEach((dropdown, index) => {
+                const productId = index + 1;
+                const categoryDropdown = document.getElementById(`dropdown-category-${productId}`);
+                categoryDropdown.querySelectorAll('.module-group').forEach((moduleGroup, categoryIndex) => {
+                    moduleGroup.querySelector('.dropdown-content').innerHTML = generateModules(categoryIndex + 1, productId);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

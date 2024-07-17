@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - Симплекс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Simplex">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Продукты</a></li>
+            <li><a href="#">Проекты</a></li>
+            <li><a href="#">Поддержка</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">База знаний</a></li>
+            <li><a href="cart.html">Корзина</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="cart-header">
+            <h1>Корзина</h1>
+        </div>
+        <div class="cart-container">
+            <h2 class="cart-title">Ваши товары</h2>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="product-top-content">
+                        <div class="cart-image">
+                            <img src="product2.png" alt="Product 1">
+                        </div>
+                        <div class="cart-details">
+                            <h3>Электронная очередь СиМед-SMART</h3>
+                            <p>Электронная очередь СиМед-SMART – это программно-аппаратный комплекс, который осуществляет координацию и управление процессом прохождения профосмотров, создавая комфортные условия ожидания для пациентов.</p>
+                            <p id="price-1">Цена: 72000 р</p>
+                            <div class="quantity-section">
+                                <p>Количество рабочих мест:</p>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" onclick="decreaseQuantity(this, 1)">-</button>
+                                    <input type="number" id="quantity-1" value="1" min="1" readonly>
+                                    <button class="quantity-btn" onclick="increaseQuantity(this, 1)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-controls">
+                        <button class="dropdown-btn" onclick="toggleDropdown('category-1')">Разверот категорий</button>
+                        <div class="dropdown-content" id="category-1">
+                            <div class="module-group">
+                                <div class="module-header">
+                                    <h4>Категория 1</h4>
+                                    <button class="dropdown-btn" onclick="toggleDropdown('module-1-1')">Развернуть модули</button>
+                                </div>
+                                <div class="dropdown-content" id="module-1-1"></div>
+                            </div>
+                            <div class="module-group">
+                                <div class="module-header">
+                                    <h4>Категория 2</h4>
+                                    <button class="dropdown-btn" onclick="toggleDropdown('module-1-2')">Развернуть модули</button>
+                                </div>
+                                <div class="dropdown-content" id="module-1-2"></div>
+                            </div>
+                        </div>
+                        <button class="remove-btn" onclick="removeFromCart(this)">Удалить</button>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="product-top-content">
+                        <div class="cart-image">
+                            <img src="product2.png" alt="Product 2">
+                        </div>
+                        <div class="cart-details">
+                            <h3>СиМед-Клиника</h3>
+                            <p>«СиМед-Клиника» — программный продукт для медицинских организаций, обеспечивающий эффективную автоматизацию бизнес-процессов при оказании услуг в амбулаторно-поликлинических условиях.</p>
+                            <p id="price-2">Цена: 6000 р</p>
+                            <div class="quantity-section">
+                                <p>Количество рабочих мест:</p>
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn" onclick="decreaseQuantity(this, 2)">-</button>
+                                    <input type="number" id="quantity-2" value="1" min="1" readonly>
+                                    <button class="quantity-btn" onclick="increaseQuantity(this, 2)">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-controls">
+                        <button class="dropdown-btn" onclick="toggleDropdown('category-2')">Разверот категорий</button>
+                        <div class="dropdown-content" id="category-2">
+                            <div class="module-group">
+                                <div class="module-header">
+                                    <h4>Категория 1</h4>
+                                    <button class="dropdown-btn" onclick="toggleDropdown('module-2-1')">Развернуть модули</button>
+                                </div>
+                                <div class="dropdown-content" id="module-2-1"></div>
+                            </div>
+                            <div class="module-group">
+                                <div class="module-header">
+                                    <h4>Категория 2</h4>
+                                    <button class="dropdown-btn" onclick="toggleDropdown('module-2-2')">Развернуть модули</button>
+                                </div>
+                                <div class="dropdown-content" id="module-2-2"></div>
+                            </div>
+                        </div>
+                        <button class="remove-btn" onclick="removeFromCart(this)">Удалить</button>
+                    </div>
+                </div>
+                <!-- Добавьте больше товаров, если нужно -->
+            </div>
+            <div class="cart-summary">
+                <h2>Итог</h2>
+                <p id="total-items">Всего товаров: 2</p>
+                <p id="total-price">Общая стоимость: 78000 р</p>
+                <button class="checkout-btn">Оформить заказ</button>
+                <button class="generate-offer-btn">Сформировать коммерческое предложение</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Simplex">
+            </div>
+            <div class="footer-contacts">
+                <div class="contact-block">
+                    <p>SimplexEDI</p>
+                    <p>СиМед-Клиника</p>
+                </div>
+                <div class="contact-block">
+                    <p>+7 (4742) 20-35-45</p>
+                    <p><a href="mailto:info@simplex48.ru">info@simplex48.ru</a></p>
+                </div>
+                <div class="contact-block">
+                    <p><a href="#">Наши вакансии</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function generateModules(category, productId) {
+            let modulesHTML = '<table><tr>';
+            for (let i = 1; i <= 9; i++) {
+                const moduleNumber = category * 9 - 9 + i;
+                modulesHTML += `<td><label><input type="checkbox" data-price="${moduleNumber * 1000}" onchange="updatePrice(${productId})"> Модуль ${moduleNumber} (${moduleNumber * 1000} р)</label></td>`;
+                if (i % 3 == 0 && i < 9) {
+                    modulesHTML += '</tr><tr>';
+                }
+            }
+            modulesHTML += '</tr></table>';
+            return modulesHTML;
+        }
+
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function increaseQuantity(button, productId) {
+            const input = document.getElementById(`quantity-${productId}`);
+            input.value = parseInt(input.value) + 1;
+            updatePrice(productId);
+        }
+
+        function decreaseQuantity(button, productId) {
+            const input = document.getElementById(`quantity-${productId}`);
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+                updatePrice(productId);
+            }
+        }
+
+        function removeFromCart(button) {
+            const cartItem = button.closest('.cart-item');
+            cartItem.remove();
+            updateTotal();
+        }
+
+        function updatePrice(productId) {
+            const basePrices = {
+                1: 72000,
+                2: 6000
+            };
+            const quantity = document.getElementById(`quantity-${productId}`).value;
+            let totalPrice = basePrices[productId] * quantity;
+
+            const checkboxes = document.querySelectorAll(`#category-${productId} input[type="checkbox"]`);
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    totalPrice += parseInt(checkbox.dataset.price);
+                }
+            });
+
+            document.getElementById(`price-${productId}`).textContent = `Цена: ${totalPrice} р`;
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            let totalItems = cartItems.length;
+            let totalPrice = 0;
+
+            cartItems.forEach(item => {
+                const priceElement = item.querySelector('.cart-details p[id^="price-"]');
+                const price = parseInt(priceElement.textContent.replace('Цена: ', '').replace(' р', ''));
+                totalPrice += price;
+            });
+
+            document.getElementById('total-items').textContent = `Всего товаров: ${totalItems}`;
+            document.getElementById('total-price').textContent = `Общая стоимость: ${totalPrice} р`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".dropdown-content").forEach((dropdown, index) => {
+                const productId = index + 1;
+                const categoryDropdown = document.getElementById(`category-${productId}`);
+                categoryDropdown.querySelectorAll('.module-group').forEach((moduleGroup, categoryIndex) => {
+                    moduleGroup.querySelector('.dropdown-content').innerHTML = generateModules(categoryIndex + 1, productId);
+                });
+            });
+            updateTotal();
+        });
+    </script>
+</body>
+</html>
